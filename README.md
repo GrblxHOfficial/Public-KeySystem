@@ -1,6 +1,9 @@
 # Public-KeySystem
 Documentation for Public-KeySystem
 
+## Why Public-KeySystem?
+This KeySystem doesnt contain any loophooles for calling the function to load hub/check key and also getting the key through the CallBack of input function.
+
 ## Usage
 ```lua
 -- // Load the libraly
