@@ -10,13 +10,18 @@ This KeySystem doesnt contain any loophooles for calling the function to load hu
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GrblxHOfficial/Public-KeySystem/main/Source.lua"))(
     "ExampleHub",   -- Hub name
     "Invalid Key!", -- Message when user inputs invalid key
-    "Correct Key!"  -- Message when user inputs correct key
+    "Correct Key!", -- Message when user inputs correct key
+    {
+        ["SaveKey"] = true,        -- Saving key enabled
+        ["Folder"] = "ExampleHub", -- Folder for key (leave blank for no folder),
+        ["File"] = "key.txt"       -- File for key
+    }
 )
 
 -- // Check the key
 repeat task.wait() until getgenv().Key == ("Test") -- Put your key here
 getgenv().Correct = true
-task.wait(2)
+task.wait(2.5)
 
 -- // Example code
 print("ExampleHub loaded!")
