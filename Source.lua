@@ -52,7 +52,7 @@ KeyWindow:CreateTab("Main", 4483362458):CreateInput({
 					Duration = 2,
 					Actions = {}
 				})
-				task.wait(2)
+				task.wait(2.5)
 				Lib:Destroy()
 			else
 				Lib:Notify({
