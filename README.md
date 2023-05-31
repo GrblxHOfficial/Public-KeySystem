@@ -4,8 +4,7 @@ Documentation for Public-KeySystem
 ## Usage
 ```lua
 -- // Load the libraly
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GrblxHOfficial/Public-KeySystem/main/Source.lua"))
-(
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GrblxHOfficial/Public-KeySystem/main/Source.lua"))(
     "ExampleHub",   -- Hub name
     "Invalid Key!", -- Message when user inputs invalid key
     "Correct Key!"  -- Message when user inputs correct key
