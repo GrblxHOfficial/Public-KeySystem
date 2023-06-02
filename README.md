@@ -15,6 +15,21 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/GrblxHOfficial/Public
         ["SaveKey"] = true,        -- Saving key enabled
         ["Folder"] = "ExampleHub", -- Folder for key (leave blank for no folder),
         ["File"] = "key.txt"       -- File for key
+    },
+    {
+        ["Labels"] = { -- Custom Labels
+            [1] = {
+                ["Text"] = "Welcome to Public-KeySystem"
+            }
+        },
+        ["Buttons"] = { -- Custom Buttons
+            [1] = {
+                ["Text"] = "Copy key link",
+                ["Function"] = function()
+                    setclipboard("https://example.com/")    
+                end
+            }
+        }
     }
 )
 
