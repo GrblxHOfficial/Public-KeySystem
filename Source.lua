@@ -11,6 +11,10 @@ task.spawn(function(...)
 		["Folder"] = "",
 		["File"] = ""
 	}
+	local additionalThings = args[5] or {
+		["Labels"] = {},
+		["Buttons"] = {}
+	}
 
 	-- // Define globals
 	getgenv().Key = ""
@@ -72,8 +76,11 @@ task.spawn(function(...)
 		}
 	})
 
+	-- // Create Tab
+	local Tab = KeyWindow:CreateTab("Main", 4483362458)
+	
 	-- // Create Key Input
-	KeyWindow:CreateTab("Main", 4483362458):CreateInput({
+	Tab:CreateInput({
 		Name = "Key",
 		PlaceholderText = "",
 		RemoveTextAfterFocusLost = true,
@@ -114,4 +121,17 @@ task.spawn(function(...)
 			end)
 		end,
 	})
+	
+	-- // Create Labels
+	for i, v in pairs(additionalThings.Labels) do
+		Tab:CreateLabel(v.Text)
+	end
+	
+	-- // Create buttons
+	for i, v in pairs(additionalThings.Buttons) do
+		Tab:CreateButton({
+			Name = v.Text,
+			Callback = v.Function,
+		})
+	end
 end, ...)
